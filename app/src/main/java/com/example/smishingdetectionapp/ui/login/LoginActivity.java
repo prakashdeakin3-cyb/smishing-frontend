@@ -278,7 +278,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void loginWithPin(String pin) {
         if (canUseDebugBypassWithPin(pin)) {
-            Toast.makeText(LoginActivity.this, "Debug PIN login successful", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, "Debug login successful", Toast.LENGTH_SHORT).show();
             navigateToMainActivity();
             return;
         }
@@ -286,7 +286,7 @@ public class LoginActivity extends AppCompatActivity {
         if (databaseAccess.validatePin(pin)) {
             navigateToMainActivity();
         } else {
-            Toast.makeText(LoginActivity.this, "Invalid PIN", Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this, "Please enter a valid 6-digit PIN.", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -317,7 +317,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.code() == 200) {
                     navigateToMainActivity();
                 } else if (response.code() == 404) {
-                    Toast.makeText(LoginActivity.this, "Wrong Credentials", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "Invalid email or password. Please try again.", Toast.LENGTH_LONG).show();
                 }
             }
 
