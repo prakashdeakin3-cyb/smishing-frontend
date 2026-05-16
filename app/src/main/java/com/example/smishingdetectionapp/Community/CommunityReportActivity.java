@@ -98,7 +98,7 @@
                     dbAccess.insertOrUpdateReport(phone, msg);
                     dbAccess.close();
 
-                    Toast.makeText(this, "Report submitted. Thank you!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "Thank you for helping protect the community. !", Toast.LENGTH_LONG).show();
                     etPhone.setText("");
                     etMessage.setText("");
                 }
