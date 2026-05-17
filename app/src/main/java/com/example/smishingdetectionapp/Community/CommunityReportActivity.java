@@ -1,5 +1,8 @@
     package com.example.smishingdetectionapp.Community;
 
+    import android.text.Editable;
+    import android.text.TextWatcher;
+    import android.widget.TextView;
     import android.content.Intent;
     import android.os.Bundle;
     import android.util.Log;
@@ -27,6 +30,25 @@
 
             EditText etPhone = findViewById(R.id.etPhoneNumber);
             EditText etMessage = findViewById(R.id.etMessageContent);
+            TextView tvCharacterCount = findViewById(R.id.tvCharacterCount);
+
+            etMessage.addTextChangedListener(new TextWatcher() {
+
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                    int length = s.length();
+
+                    tvCharacterCount.setText(length + " / 300 characters");
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) { }
+            });
+
             Button btnReport = findViewById(R.id.btnReportProtect);
 
             final String source =
