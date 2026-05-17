@@ -111,6 +111,8 @@
                 android:inputType="phone"
                 android:background="@drawable/rounded_lightblue_border"
                 android:padding="12dp"
+                android:drawableStart="@android:drawable/ic_menu_call"
+                android:drawablePadding="10dp"
                 android:layout_marginBottom="16dp"/>
 
             <!-- Message Content Field -->
@@ -128,8 +130,9 @@
                 android:inputType="textMultiLine"
                 android:background="@drawable/rounded_lightblue_border"
                 android:padding="12dp"
+                android:drawableStart="@android:drawable/ic_dialog_email"
+                android:drawablePadding="10dp"
                 android:layout_marginBottom="24dp"/>
-
             <!-- Submit Button -->
             <Button
                 android:id="@+id/btnReportProtect"
